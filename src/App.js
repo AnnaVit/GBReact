@@ -1,25 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import {Message} from "./components/Message/Message";
+
+const name = 'Alex';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const foo = () => {
+        alert('Hello');
+    }
+    return (
+        <div className="App">
+            <Message name={name} num={123+2} doSmth={foo}/>
+        </div>
+    );
 }
 
 export default App;
+
